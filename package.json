@@ -1,0 +1,14 @@
+{
+  "name": "cdn.berabou.me",
+  "private": true,
+  "main": "cdn.berabou.me.js",
+  "scripts": {
+    "start": "node cdn.berabou.me"
+  },
+  "dependencies": {
+    "compression": "^1.6.1",
+    "cors": "^2.7.1",
+    "express": "^4.13.4",
+    "express-npmcdn": "0.0.1"
+  }
+}

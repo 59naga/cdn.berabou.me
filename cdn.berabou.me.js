@@ -13,6 +13,9 @@ app.use(npmcdn(`${__dirname}/public/packages/`, {
   maxAge: 60 * 60 * 24 * 365, // one year
   extensions: ['', '.js', '.json', '.html'],
 }));
+app.get('/', (req, res) => {
+  res.redirect('https://github.com/59naga/cdn.berabou.me#readme');
+});
 app.listen(port, () => {
   console.log(`npmcdn is available on http://localhost:${port}!`);
 });

@@ -14,7 +14,7 @@ app.use(npmcdn(path.join(__dirname, 'public', 'packages'), {
   maxAge: 60 * 60 * 24 * 365, // one year
   extensions: ['', '.js', '.json', '.html'],
 }));
-app.get(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.listen(port, () => {
   process.stdout.write(`npmcdn is available on http://localhost:${port}\n`);
 });

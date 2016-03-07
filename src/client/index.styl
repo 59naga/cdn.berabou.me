@@ -1,0 +1,68 @@
+@import 'kouto-swiss'
+
+// environment
+
+@font-face
+  font-family YozakuraJP
+  src url(http://static.edgy.black/fonts/YozakuraJP-Regular.otf)
+
+centerize()
+  margin auto
+  absolute 0 0 0 0
+
+primary = #d50000 // .mdl-color--red-A700
+
+// layouts
+html
+body
+#container
+  min-height 100%
+
+  #title
+  h1
+  h2
+  button
+    font-family YozakuraJP, sans-serif
+
+  button
+    cursor pointer
+
+    outline none // disable focus mark
+    border 0
+    background white
+
+#main
+  font-size 6vw
+  > button
+    font-size 12vw
+    width 7em
+    height 2em
+    centerize()
+
+  form
+    height 240px
+    font-size 16px
+    h2
+      opacity .2
+      font-size 64px
+      text-align center
+      height 1.5em
+
+      centerize()
+
+      z-index 1
+
+    h2 + *
+      z-index 2
+
+    .mdl-grid
+      width 380px
+      height 200px
+      centerize()
+
+    .mdl-textfield *
+      font-family Monaco,monospace
+
+    button
+      width 100%
+      font-size 150%

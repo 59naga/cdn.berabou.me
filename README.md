@@ -1,6 +1,17 @@
 [cdn.berabou.me](https://cdn.berabou.me/)
 ---
 
+is content delivery network of [npmjs](https://www.npmjs.com/).
+
+can load published package files and documents such as `https://cdn.berabou.me/package@version/path/to/file`.
+
+Example
+---
+* https://cdn.berabou.me/jquery
+* https://cdn.berabou.me/react/dist/react.min.js
+* https://cdn.berabou.me/immaterial-design-ripple/release/
+* https://npmcdn.com/express-npmcdn/docs/
+
 URL Format
 ---
 * `/package-name` -> `latest version` / `main file`
@@ -22,10 +33,10 @@ git clone https://github.com/59naga/cdn.berabou.me
 cd cdn.berabou.me
 npm install
 
-// client only
+# client only
 npm run dev
 
-// boot hosting server
+# boot hosting server
 npm run build
 npm start
 ```

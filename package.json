@@ -37,7 +37,6 @@
     "react-addons-linked-state-mixin": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-elastic-modal": "^0.1.1",
-    "react-localstorage": "^0.2.9",
     "react-mdl": "^1.4.4",
     "react-mixin": "^3.0.3",
     "style-loader": "^0.13.0",

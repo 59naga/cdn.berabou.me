@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import mixin from 'react-mixin';
-import localStorageMixin from 'react-localstorage';
 import linkedStateMixin from 'react-addons-linked-state-mixin';
 import Ripple from 'immaterial-design-ripple';
 import ElasticModal from 'react-elastic-modal';
@@ -10,16 +9,20 @@ import { Textfield, Grid, Cell } from 'react-mdl';
 
 import './index.styl';
 
+const ContainerKey = 'container';
 class Container extends React.Component {
   constructor() {
     super();
 
-    this.state = { isOpen: false, pkg: '', paths: '' };
+    const storageState = JSON.parse(localStorage.getItem(ContainerKey));
+    const initialState = { isOpen: false, pkg: '', paths: '' };
+    this.state = storageState || initialState;
   }
   componentDidMount() {
     this.onMount();
   }
   componentDidUpdate(prevProps, prevState) {
+    localStorage.setItem(ContainerKey, JSON.stringify(this.state));
     if (this.state.pkg === prevState.pkg) {
       return;
     }
@@ -29,9 +32,6 @@ class Container extends React.Component {
   onMount() {
     const buttons = [].slice.call(this.refs.main.querySelectorAll('button'));
     buttons.map((button) => new Ripple(button, { color: 'rgba(213,0,0,0.3)' }));
-  }
-  getStateFilterKeys() {
-    return ['pkg', 'paths'];
   }
   open() {
     this.setState({ isOpen: true });
@@ -104,7 +104,6 @@ class Container extends React.Component {
   }
 }
 
-mixin(Container.prototype, localStorageMixin);
 mixin(Container.prototype, linkedStateMixin);
 
 window.addEventListener('load', () => {

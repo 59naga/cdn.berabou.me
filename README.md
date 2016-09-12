@@ -10,7 +10,7 @@ Example
 * https://cdn.berabou.me/jquery
 * https://cdn.berabou.me/react/dist/react.min.js
 * https://cdn.berabou.me/immaterial-design-ripple/release/
-* https://cdn.berabou.me/express-npmcdn/docs/
+* https://cdn.berabou.me/express-unpkg/docs/
 
 URL Format
 ---
